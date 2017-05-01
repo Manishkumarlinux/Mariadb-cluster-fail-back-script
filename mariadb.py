@@ -11,8 +11,8 @@ fp = open('/opt/con.txt', 'r')
 msg = MIMEText(fp.read())
 fp.close()
 
-me = 'DNSHA@cyberspace.in'
-you = 'manish@cloudmailstore.com'
+me = 'DNSHA@yourdomain.com'
+you = 'manish@yourdomain.com'
 msg['Subject'] = 'DNS Cluster problem'
 msg['From'] = me
 msg['To'] = you
@@ -22,7 +22,7 @@ s.ehlo()
 IP = ['78']
 
 for ping in IP:
-    address = "103.11.86." + str(ping)
+    address = "10.0.1." + str(ping)
     res = subprocess.call(['ping', '-c', '3', address])
     
     if res == 0:
